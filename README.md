@@ -9,8 +9,8 @@ To run only civetweb and reuse the existing artifact:
 ./run_civet.sh
 ```
 
-Port 8080 will be exposed on all interfaces
-So this should work:
+Port 8080 will be exposed on all interfaces\n
+This should work:
 ```
 curl localhost:8080
 ```
