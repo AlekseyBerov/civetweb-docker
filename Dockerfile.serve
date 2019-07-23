@@ -1,0 +1,10 @@
+FROM ubuntu:16.04
+
+ADD artifacts/civet-pkg.deb /root/civet-pkg.deb
+RUN dpkg -i /root/civet-pkg.deb
+
+EXPOSE 8080
+ENTRYPOINT ["civetweb", "/etc/civetweb.conf"]
+
+
+
