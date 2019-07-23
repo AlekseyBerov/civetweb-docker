@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "Nyan cat";
 apt-get update && apt-get install -y build-essential \
     sudo \
     cmake \
@@ -14,9 +13,10 @@ apt-get update && apt-get install -y build-essential \
 git clone https://github.com/civetweb/civetweb;
 git checkout v1.11;
 
-cd civetweb; bash build;
+cd civetweb; 
+bash build;
 
-cd output/build; ls -la;
+cd output/build; 
 grep -rl "PREFIX" *.cmake | xargs sed -i 's,"/usr/local","/tmp/outcome/civet-pkg/usr",g';
 
 cmake -P cmake_install.cmake;
@@ -27,7 +27,9 @@ tee -a civet-pkg/var/www/index.html << END
 <html>
 <title>CivetWeb docker image, how about that</title>
 <body>
-<img src="https://tenor.com/view/stickers-pusheen-nyan-cat-gif-3532525"></img>
+
+<h2> some clear message </h2>
+
 </body>
 </html>
 END
