@@ -17,10 +17,10 @@ cd civetweb;
 bash build;
 
 cd output/build; 
-grep -rl "PREFIX" *.cmake | xargs sed -i 's,"/usr/local","/tmp/artifacts/civet-pkg/usr",g';
+grep -rl "PREFIX" *.cmake | xargs sed -i 's,"/usr/local","/usr/src/civet-pkg/usr",g';
 cmake -P cmake_install.cmake;
 
-cd /tmp/artifacts;
+cd /usr/src;
 
 mkdir civet-pkg/etc
 tee -a civet-pkg/etc/civetweb.conf << END
