@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker build -t cmaker/v1 -f Dockerfile.build .
 docker run --mount src="$(pwd)/artifacts",target=/tmp/artifacts,type=bind cmaker/v1
 
