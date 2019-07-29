@@ -1,10 +1,10 @@
 # civetweb-docker
 
-To run the full bundle and to build new artifacts:
+Build image specifying the image name:
 ```
-./build_n_run_civet.sh
+docker build -t civet/v1 .
 ```
-To run only civetweb and reuse the existing artifact:
+Run the image:
 ```
 ./run_civet.sh
 ```

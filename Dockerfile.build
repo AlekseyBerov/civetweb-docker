@@ -1,6 +1,0 @@
-FROM ubuntu:16.04
-
-ADD scripts/cmaker.sh /usr/src/cmaker.sh
-
-ENTRYPOINT ["/usr/src/cmaker.sh"]
-
